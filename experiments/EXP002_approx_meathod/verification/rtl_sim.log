@@ -4,13 +4,13 @@ VCD info: dumpfile rtl_activity.vcd opened for output.
 ==================================================
 Total Combinations (N)       : 65536
 Non-Zero Exact Outputs (Nnz) : 65025
-Error Count (N_error)        : 28284
+Error Count (N_error)        : 18399
 --------------------------------------------------
-Error Rate (ER)              : 0.431580
-Mean Absolute Error (MAE)    : 896.367188
-Mean Squared Error (MSE)     : 8761197.250000
-Worst-Case Error (WCE)       : 29448
-Mean Relative Error (MRE)    : 0.029120
-Maximum Relative Error(MaxRE): 0.461176
+Error Rate (ER)              : 0.280746
+Mean Absolute Error (MAE)    : 36.972656
+Mean Squared Error (MSE)     : 9237.500000
+Worst-Case Error (WCE)       : 1488
+Mean Relative Error (MRE)    : 0.004118
+Maximum Relative Error(MaxRE): 0.285564
 ==================================================
 /home/praneel/vlsi/projects/IDP_2/experiments/EXP002_approx_meathod/verification/tb.sv:102: $finish called at 65536000 (1ps)
