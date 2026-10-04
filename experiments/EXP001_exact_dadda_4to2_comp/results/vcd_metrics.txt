@@ -1,0 +1,11 @@
+VCD: experiments/EXP001_exact_dadda_4to2_comp/verification/rtl_activity.vcd
+Scope: tb_exact_dadda_with_compressor/dut
+Unique input pairs observed: 65536
+Unknown states/timestamps skipped: 0
+Error count: 0
+Error rate: 0
+MAE: 0
+MSE: 0
+WCE: 0
+MRE_nonzero: 0
+MaxRE_nonzero: 0

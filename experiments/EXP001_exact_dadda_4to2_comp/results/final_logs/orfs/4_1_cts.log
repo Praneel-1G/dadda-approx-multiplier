@@ -1,0 +1,162 @@
+OpenROAD 26Q3-1499-g46ab99414e 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty /home/praneel/vlsi/tools/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/praneel/vlsi/projects/IDP_2/experiments/EXP001_exact_dadda_4to2_comp/pd/orfs/results/sky130hd/exact_dadda_with_compressor/base/3_place.odb
+read_sdc /home/praneel/vlsi/projects/IDP_2/experiments/EXP001_exact_dadda_4to2_comp/pd/orfs/results/sky130hd/exact_dadda_with_compressor/base/3_place.sdc
+source /home/praneel/vlsi/tools/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+clock_tree_synthesis -sink_clustering_enable -repair_clock_nets
+[INFO CTS-0050] Root buffer is sky130_fd_sc_hd__clkbuf_8.
+[INFO CTS-0051] Sink buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sky130_fd_sc_hd__clkbuf_8
+                    sky130_fd_sc_hd__clkbuf_16
+[INFO CTS-0049] Characterization buffer is sky130_fd_sc_hd__clkbuf_16.
+[WARNING CTS-0083] No clock nets have been found.
+[INFO CTS-0008] TritonCTS found 0 clock nets.
+[WARNING CTS-0082] No valid clock nets in the design.
+[INFO CTS-0500] Runtime: 2.93s
+estimate_parasitics -placement
+detailed_placement
+[INFO DPL-0006] Core area: 4444.26 um^2
+[INFO DPL-0007] Movable instances area: 2717.61 um^2
+[INFO DPL-0008] Fixed instances area within core: 65.06 um^2
+[INFO DPL-0009] Utilization: 62.6%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 324 cells
+[INFO DPL-0500] Runtime: 0.00s
+Placement Analysis
+---------------------------------
+total displacement        451.3 u
+average displacement        1.4 u
+max displacement            9.2 u
+original HPWL            4347.4 u
+legalized HPWL           4623.4 u
+delta HPWL                    6 %
+
+estimate_parasitics -placement
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0094] Found 14 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 14 out of 14 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   StTNS    |   EnTNS    |  Viol  |  Worst  
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            |            | Endpts | St/EnPt 
+------------------------------------------------------------------------------------------------------------------------------
+       0* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -2.829 |      -39.2 |      -28.6 |     14 | P[15]
+      10* |       0 |       6 |        0 |      0 |     3 |    -0.1% |   -2.673 |      -38.0 |      -27.4 |     14 | P[15]
+      20* |       0 |      13 |        0 |      0 |     6 |    -0.2% |   -2.354 |      -33.7 |      -25.9 |     14 | P[11]
+      30* |       0 |      18 |        0 |      0 |    11 |    +0.0% |   -2.228 |      -33.4 |      -25.2 |     14 | P[15]
+      40* |       0 |      25 |        0 |      0 |    14 |    +0.0% |   -2.186 |      -33.0 |      -24.7 |     14 | P[11]
+      50* |       0 |      32 |        0 |      0 |    17 |    -0.2% |   -2.108 |      -31.4 |      -23.7 |     14 | P[13]
+      60* |       0 |      40 |        0 |      0 |    19 |    -0.4% |   -2.067 |      -31.3 |      -23.6 |     14 | P[15]
+      70* |       0 |      48 |        2 |      0 |    20 |    -0.4% |   -2.001 |      -30.6 |      -23.4 |     14 | P[15]
+      80* |       0 |      57 |        2 |      0 |    21 |    +0.1% |   -1.967 |      -29.8 |      -21.9 |     14 | P[15]
+      90* |       0 |      65 |        2 |      0 |    23 |    +1.1% |   -1.922 |      -29.3 |      -21.7 |     14 | P[15]
+      94* |       0 |      66 |        2 |      0 |    23 |    +1.2% |   -1.921 |      -29.3 |      -21.7 |     14 | P[15]
+     100* |       0 |      68 |        3 |      0 |    25 |    +1.8% |   -1.929 |      -29.4 |      -21.7 |     14 | P[15]
+     100* |       0 |      66 |        2 |      0 |    24 |    +1.2% |   -1.921 |      -29.3 |      -21.7 |     14 | P[15]
+     104* |       0 |      66 |        2 |      0 |    24 |    +1.2% |   -1.921 |      -29.3 |      -21.7 |     14 | P[15]
+     110* |       0 |      70 |        3 |      0 |    24 |    +1.7% |   -1.918 |      -29.2 |      -21.8 |     14 | P[15]
+     110* |       0 |      70 |        3 |      0 |    24 |    +1.7% |   -1.918 |      -29.2 |      -21.8 |     14 | P[15]
+     116* |       0 |      74 |        3 |      0 |    24 |    +1.7% |   -1.918 |      -29.3 |      -21.6 |     14 | P[15]
+     120* |       0 |      76 |        3 |      0 |    25 |    +1.8% |   -1.918 |      -29.3 |      -21.8 |     14 | P[15]
+     130* |       0 |      82 |        5 |      0 |    27 |    +2.9% |   -1.925 |      -29.3 |      -21.5 |     14 | P[15]
+     132* |       0 |      79 |        3 |      0 |    26 |    +2.0% |   -1.918 |      -29.2 |      -21.3 |     14 | P[15]
+     140* |       0 |      83 |        3 |      0 |    29 |    +2.0% |   -1.918 |      -29.0 |      -21.0 |     14 | P[15]
+     150* |       0 |      92 |        3 |      0 |    30 |    +2.1% |   -1.918 |      -28.3 |      -20.2 |     14 | P[15]
+     160* |       0 |      98 |        4 |      0 |    33 |    +2.6% |   -1.918 |      -28.3 |      -20.2 |     14 | P[15]
+     164* |       0 |      96 |        3 |      0 |    32 |    +2.1% |   -1.918 |      -28.3 |      -20.2 |     14 | P[15]
+     170* |       0 |     101 |        3 |      0 |    32 |    +2.3% |   -1.918 |      -28.3 |      -20.0 |     14 | P[15]
+     180* |       0 |     106 |        5 |      0 |    35 |    +3.6% |   -1.918 |      -28.3 |      -20.5 |     14 | P[15]
+     183* |       0 |     106 |        4 |      0 |    35 |    +3.3% |   -1.918 |      -28.3 |      -19.9 |     14 | P[15]
+     190* |       0 |     111 |        5 |      0 |    35 |    +3.5% |   -1.918 |      -28.3 |      -19.6 |     14 | P[15]
+     200* |       0 |     115 |        9 |      0 |    37 |    +5.1% |   -1.918 |      -28.3 |      -20.9 |     14 | P[15]
+     200* |       0 |     112 |        5 |      0 |    36 |    +3.6% |   -1.918 |      -28.3 |      -19.6 |     14 | P[15]
+     210* |       0 |     117 |        8 |      0 |    37 |    +4.4% |   -1.918 |      -28.3 |      -19.9 |     14 | P[15]
+     220* |       1 |     122 |       11 |      0 |    38 |    +5.6% |   -1.918 |      -28.3 |      -20.5 |     14 | P[15]
+     221* |       0 |     115 |        6 |      0 |    36 |    +4.0% |   -1.918 |      -28.3 |      -19.2 |     14 | P[15]
+     230* |       0 |     121 |        8 |      0 |    36 |    +4.6% |   -1.918 |      -28.3 |      -19.7 |     14 | P[15]
+     240* |       0 |     127 |       10 |      0 |    38 |    +5.9% |   -1.918 |      -28.3 |      -20.3 |     14 | P[15]
+     242* |       0 |     121 |        7 |      0 |    36 |    +4.4% |   -1.918 |      -28.3 |      -19.1 |     14 | P[15]
+     250* |       0 |     125 |        8 |      0 |    38 |    +5.1% |   -1.918 |      -28.2 |      -18.7 |     14 | P[15]
+     260* |       0 |     132 |        9 |      0 |    40 |    +5.1% |   -1.918 |      -28.0 |      -18.5 |     14 | P[15]
+     270* |       0 |     139 |       11 |      0 |    41 |    +6.4% |   -1.918 |      -27.9 |      -18.7 |     14 | P[15]
+     280* |       0 |     143 |       16 |      0 |    42 |    +8.3% |   -1.918 |      -27.9 |      -19.3 |     14 | P[15]
+     283* |       0 |     137 |        9 |      0 |    40 |    +5.6% |   -1.918 |      -27.9 |      -18.5 |     14 | P[15]
+     290* |       0 |     142 |        9 |      0 |    41 |    +6.6% |   -1.918 |      -27.9 |      -18.1 |     14 | P[15]
+     293* |       0 |     144 |        9 |      0 |    42 |    +6.4% |   -1.918 |      -27.8 |      -18.0 |     14 | P[15]
+     295* |       0 |     145 |        9 |      0 |    42 |    +6.4% |   -1.918 |      -27.5 |      -18.0 |     14 | P[15]
+     295* |       0 |     145 |        9 |      0 |    42 |    +6.4% |   -1.918 |      -27.5 |      -18.0 |     14 | P[15]
+     296+ |       0 |     145 |        9 |      0 |    42 |    +6.4% |   -1.918 |      -27.5 |      -18.0 |     12 | P[15]
+     297+ |       0 |     145 |        9 |      0 |    42 |    +6.4% |   -1.918 |      -27.5 |      -18.0 |     12 | P[15]
+     298+ |       0 |     145 |        9 |      0 |    42 |    +6.4% |   -1.918 |      -27.5 |      -18.0 |     12 | P[15]
+     299+ |       0 |     145 |        9 |      0 |    42 |    +6.4% |   -1.918 |      -27.5 |      -18.0 |     12 | P[15]
+     300+ |       0 |     145 |        9 |      0 |    42 |    +6.4% |   -1.918 |      -27.5 |      -18.0 |     12 | P[15]
+     300+ |       0 |     145 |        9 |      0 |    42 |    +6.4% |   -1.918 |      -27.5 |      -18.0 |     12 | P[15]
+     301+ |       0 |     145 |        9 |      0 |    42 |    +6.4% |   -1.918 |      -27.5 |      -18.0 |     12 | P[15]
+     302+ |       0 |     145 |        9 |      0 |    42 |    +6.4% |   -1.918 |      -27.5 |      -18.0 |     12 | P[15]
+     303+ |       0 |     145 |        9 |      0 |    42 |    +6.4% |   -1.918 |      -27.5 |      -18.0 |     12 | P[15]
+     304+ |       0 |     145 |        9 |      0 |    42 |    +6.4% |   -1.918 |      -27.5 |      -18.0 |     12 | P[15]
+     309+ |       0 |     149 |        9 |      0 |    42 |    +6.6% |   -1.918 |      -27.5 |      -17.9 |     12 | P[15]
+     310+ |       0 |     149 |        9 |      0 |    42 |    +6.6% |   -1.918 |      -27.5 |      -17.9 |     12 | P[15]
+     311+ |       0 |     150 |        9 |      0 |    42 |    +6.7% |   -1.918 |      -27.5 |      -17.9 |     12 | P[15]
+     313+ |       0 |     151 |        9 |      0 |    42 |    +6.8% |   -1.918 |      -27.5 |      -17.9 |     12 | P[15]
+    final |       0 |     151 |        9 |      0 |    42 |    +6.8% |   -1.918 |      -27.5 |      -17.9 |     12 | P[15]
+------------------------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0040] Inserted 9 buffers.
+[INFO RSZ-0051] Resized 151 instances: 151 up, 0 up match, 0 down, 0 VT
+[INFO RSZ-0043] Swapped pins on 42 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0505] Runtime: 2.13s
+[INFO RSZ-0033] No hold violations found.
+[INFO RSZ-0506] Runtime: 0.00s
+detailed_placement
+[INFO DPL-0006] Core area: 4444.26 um^2
+[INFO DPL-0007] Movable instances area: 2907.79 um^2
+[INFO DPL-0008] Fixed instances area within core: 65.06 um^2
+[INFO DPL-0009] Utilization: 66.9%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 333 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |         38 |        12 |        26
+        1 |          0 |         0 |         0
+Negotiation phase 1 converged at iteration 1.
+[INFO DPL-0500] Runtime: 0.01s
+Placement Analysis
+---------------------------------
+total displacement        235.0 u
+average displacement        0.7 u
+max displacement           21.8 u
+original HPWL            4672.8 u
+legalized HPWL           5025.3 u
+delta HPWL                    8 %
+
+estimate_parasitics -placement
+Report metrics stage 4, cts final...
+No registers in design
+
+==========================================================================
+cts final report_design_area
+--------------------------------------------------------------------------
+Design area 2973 um^2 67% utilization.
+write_db /home/praneel/vlsi/projects/IDP_2/experiments/EXP001_exact_dadda_4to2_comp/pd/orfs/results/sky130hd/exact_dadda_with_compressor/base/4_1_cts.odb
+write_sdc -no_timestamp /home/praneel/vlsi/projects/IDP_2/experiments/EXP001_exact_dadda_4to2_comp/pd/orfs/results/sky130hd/exact_dadda_with_compressor/base/4_cts.sdc
+Elapsed time: 0:05.87[h:]min:sec. CPU time: user 6.52 sys 0.76 (123%). Peak memory: 155072KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+4_1_cts                   .odb            5            151 447708c68ba0a27c84ab

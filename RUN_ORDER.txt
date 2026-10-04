@@ -1,0 +1,30 @@
+IDP-2 CANONICAL RUN ORDER
+
+Environment prerequisite:
+  OR_FLOW  = your OpenROAD-flow-scripts/flow directory (you already export this in .bashrc)
+  LIBERTY  = the same sky130hd Liberty/PVT file used by the ORFS run
+
+The experiment scripts use OR_FLOW directly. Do not set ORFS_FLOW_DIR for this repository.
+
+1. ./experiments/EXP000_exact_dadda_no_comp/scripts/run_rtl.sh
+2. ./experiments/EXP000_exact_dadda_no_comp/scripts/check_vcd.sh
+3. ./experiments/EXP001_exact_dadda_4to2_comp/scripts/run_rtl.sh
+4. ./experiments/EXP001_exact_dadda_4to2_comp/scripts/check_vcd.sh
+5. ./experiments/EXP000_exact_dadda_no_comp/scripts/run_pd.sh
+6. ./experiments/EXP001_exact_dadda_4to2_comp/scripts/run_pd.sh
+7. ./experiments/EXP000_exact_dadda_no_comp/scripts/generate_gate_vcd.sh
+8. ./experiments/EXP001_exact_dadda_4to2_comp/scripts/generate_gate_vcd.sh
+9. export LIBERTY=/path/to/the/same/sky130hd/PVT/liberty.used.by.ORFS
+10. ./experiments/EXP000_exact_dadda_no_comp/scripts/vcd_power.sh
+11. ./experiments/EXP001_exact_dadda_4to2_comp/scripts/vcd_power.sh
+12. Update reports/MASTER_RESULTS.md only from measured evidence.
+
+Do not create another numbered scratch folder for this sequence.
+Do not edit historical files under archive/legacy_runs; they are retained as provenance only.
+
+Important RTL simulation rule:
+The RTL testbench, not the DUT, is the Icarus simulation top. Each experiment declares RTL_TB_MODULE and GATE_TB_MODULE in experiment.env.
+
+FINAL COLLECTION
+8. Run `./scripts/collect_results.sh` inside the experiment's `scripts/` directory after `vcd_power.sh` succeeds.
+   This creates `results/FINAL_SUMMARY.md` and collects final artifacts/reports.

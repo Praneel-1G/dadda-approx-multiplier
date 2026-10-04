@@ -1,0 +1,38 @@
+metric,value,unit,method,notes
+experiment_id,EXP001,,manifest,
+design_name,exact_dadda_with_compressor,,manifest,
+platform,sky130hd,,manifest,
+input_width,8,bits,manifest,
+output_width,16,bits,manifest,
+clock_target,2.000,ns,SDC,
+area,1875.548800,um2,Yosys synth_stat,
+cell_count,192,cells,Yosys synth_stat,
+port_count,3,ports,Yosys synth_stat,
+period_min,3.90,ns,ORFS 6_finish,
+fmax,256.42,MHz,derived,
+wns,-1.90,ns,ORFS 6_finish,
+tns,-18.08,ns,ORFS 6_finish,
+critical_path_delay,3.8999,ns,ORFS 6_finish,
+critical_path_slack,-1.8999,ns,ORFS 6_finish,
+setup_violations,13,count,ORFS 6_finish,
+hold_violations,0,count,ORFS 6_finish,
+max_slew_violations,0,count,ORFS 6_finish,
+max_fanout_violations,0,count,ORFS 6_finish,
+max_cap_violations,0,count,ORFS 6_finish,
+timing_status,FAIL,,derived,
+vcd_unique_pairs,65536,count,VCD metrics,
+vcd_error_count,0,count,VCD metrics,
+vcd_error_rate,0,,VCD metrics,
+vcd_mae,0,,VCD metrics,
+vcd_mse,0,,VCD metrics,
+vcd_wce,0,,VCD metrics,
+vcd_mre_nonzero,0,,VCD metrics,
+vcd_maxre_nonzero,0,,VCD metrics,
+power_no_vcd,3.16e-03,W,ORFS 6_finish report_power,No VCD activity annotation in the finish report
+power_no_vcd_mw,3.160000,mW,derived,
+power_vcd,1.899492e-03,W,VCD-driven OpenROAD power,Annotated gate VCD
+power_vcd_mw,1.899492,mW,derived,
+power_vcd_minus_no_vcd_pct,39.889,%,derived,Relative reduction from no-VCD baseline
+power_vcd_over_no_vcd,0.601105,ratio,derived,
+pdp_no_vcd,12.323684,pJ,derived,Power x final critical-path delay
+pdp_vcd,7.407829,pJ,derived,Power x final critical-path delay

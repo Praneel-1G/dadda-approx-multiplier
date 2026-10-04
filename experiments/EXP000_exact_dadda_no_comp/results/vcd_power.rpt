@@ -1,0 +1,58 @@
+OpenROAD 26Q3-1499-g46ab99414e 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+Annotated 907 pin activities.
+Startpoint: A[1] (input port clocked by VCLK)
+Endpoint: P[13] (output port clocked by VCLK)
+Path Group: VCLK
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock VCLK (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 v input external delay
+   0.0000    0.0000 v A[1] (in)
+   0.1219    0.1219 v input2/X (sky130_fd_sc_hd__buf_8)
+   0.1547    0.2766 v _166_/X (sky130_fd_sc_hd__and2_4)
+   0.2352    0.5118 v _254_/SUM (sky130_fd_sc_hd__ha_4)
+   0.5232    1.0350 ^ _213_/SUM (sky130_fd_sc_hd__fa_1)
+   0.4326    1.4676 v _226_/SUM (sky130_fd_sc_hd__fa_1)
+   0.5529    2.0205 ^ _237_/SUM (sky130_fd_sc_hd__fa_1)
+   0.2271    2.2476 v _251_/SUM (sky130_fd_sc_hd__ha_4)
+   0.1406    2.3882 v _099_/X (sky130_fd_sc_hd__and3_4)
+   0.3670    2.7552 v _100_/X (sky130_fd_sc_hd__a221o_2)
+   0.1434    2.8986 v rebuffer112/X (sky130_fd_sc_hd__buf_6)
+   0.3564    3.2551 ^ _132_/Y (sky130_fd_sc_hd__a2111oi_4)
+   0.0761    3.3312 v _135_/Y (sky130_fd_sc_hd__nor3_2)
+   0.1563    3.4874 v _136_/X (sky130_fd_sc_hd__xor2_1)
+   0.1283    3.6158 v output21/X (sky130_fd_sc_hd__buf_2)
+   0.0002    3.6160 v P[13] (out)
+             3.6160   data arrival time
+
+   2.0000    2.0000   clock VCLK (rise edge)
+   0.0000    2.0000   clock network delay (ideal)
+   0.0000    2.0000   clock reconvergence pessimism
+   0.0000    2.0000   output external delay
+             2.0000   data required time
+-------------------------------------------------------------
+             2.0000   data required time
+            -3.6160   data arrival time
+-------------------------------------------------------------
+            -1.6160   slack (VIOLATED)
+
+
+worst slack max -1.6160
+tns max -15.1671
+Group                    Internal    Switching      Leakage        Total
+                            Power        Power        Power        Power (Watts)
+------------------------------------------------------------------------
+Sequential           0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00   0.0%
+Combinational        9.913018e-04 7.979030e-04 1.410784e-09 1.789206e-03 100.0%
+Clock                0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00   0.0%
+Macro                0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00   0.0%
+Pad                  0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00   0.0%
+------------------------------------------------------------------------
+Total                9.913018e-04 7.979030e-04 1.410784e-09 1.789206e-03 100.0%
+                            55.4%        44.6%         0.0%

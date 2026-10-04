@@ -1,0 +1,200 @@
+
+==========================================================================
+floorplan final report_tns
+--------------------------------------------------------------------------
+tns max -10.64
+
+==========================================================================
+floorplan final report_wns
+--------------------------------------------------------------------------
+wns max -1.29
+
+==========================================================================
+floorplan final report_worst_slack
+--------------------------------------------------------------------------
+worst slack max -1.29
+
+==========================================================================
+floorplan final report_clock_min_period
+--------------------------------------------------------------------------
+VCLK period_min = 3.29 fmax = 303.79
+
+==========================================================================
+floorplan final report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: B[0] (input port clocked by VCLK)
+Endpoint: P[0] (output port clocked by VCLK)
+Path Group: VCLK
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock VCLK (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00 ^ input external delay
+     8    0.01    0.05    0.00    0.00 ^ B[0] (in)
+                                         B[0] (net)
+                  0.05    0.00    0.00 ^ _159_/A (sky130_fd_sc_hd__and2_1)
+     1    0.00    0.05    0.11    0.11 ^ _159_/X (sky130_fd_sc_hd__and2_1)
+                                         pp[0][0] (net)
+                  0.05    0.00    0.11 ^ _262_/A (sky130_fd_sc_hd__buf_4)
+     1    0.00    0.03    0.10    0.21 ^ _262_/X (sky130_fd_sc_hd__buf_4)
+                                         P[0] (net)
+                  0.03    0.00    0.21 ^ P[0] (out)
+                                  0.21   data arrival time
+
+                  0.00    0.00    0.00   clock VCLK (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                          0.00    0.00   output external delay
+                                  0.00   data required time
+-----------------------------------------------------------------------------
+                                  0.00   data required time
+                                 -0.21   data arrival time
+-----------------------------------------------------------------------------
+                                  0.21   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: B[5] (input port clocked by VCLK)
+Endpoint: P[13] (output port clocked by VCLK)
+Path Group: VCLK
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock VCLK (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00 v input external delay
+     8    0.01    0.05    0.00    0.00 v B[5] (in)
+                                         B[5] (net)
+                  0.05    0.00    0.00 v _124_/B (sky130_fd_sc_hd__and2_4)
+     1    0.01    0.03    0.16    0.16 v _124_/X (sky130_fd_sc_hd__and2_4)
+                                         pp[29][0] (net)
+                  0.03    0.00    0.16 v _207_/A (sky130_fd_sc_hd__fa_1)
+     1    0.01    0.08    0.55    0.71 ^ _207_/SUM (sky130_fd_sc_hd__fa_1)
+                                         s1_c8_fa.sum (net)
+                  0.08    0.00    0.71 ^ _217_/B (sky130_fd_sc_hd__fa_1)
+     1    0.01    0.09    0.44    1.15 v _217_/SUM (sky130_fd_sc_hd__fa_1)
+                                         s2_c8_fa1.sum (net)
+                  0.09    0.00    1.15 v _228_/B (sky130_fd_sc_hd__fa_1)
+     1    0.01    0.10    0.49    1.64 v _228_/SUM (sky130_fd_sc_hd__fa_1)
+                                         s3_c8_fa.sum (net)
+                  0.10    0.00    1.64 v _239_/A (sky130_fd_sc_hd__fa_1)
+     1    0.01    0.11    0.60    2.23 ^ _239_/SUM (sky130_fd_sc_hd__fa_1)
+                                         s4_c8_fa.sum (net)
+                  0.11    0.00    2.23 ^ _253_/A (sky130_fd_sc_hd__ha_4)
+     6    0.01    0.05    0.23    2.46 v _253_/SUM (sky130_fd_sc_hd__ha_4)
+                                         _025_ (net)
+                  0.05    0.00    2.46 v _101_/A (sky130_fd_sc_hd__and3_4)
+     3    0.01    0.04    0.15    2.61 v _101_/X (sky130_fd_sc_hd__and3_4)
+                                         _034_ (net)
+                  0.04    0.00    2.61 v _102_/B (sky130_fd_sc_hd__and2_4)
+     2    0.01    0.04    0.16    2.77 v _102_/X (sky130_fd_sc_hd__and2_4)
+                                         _035_ (net)
+                  0.04    0.00    2.77 v _132_/A1 (sky130_fd_sc_hd__a2111oi_4)
+     1    0.00    0.22    0.26    3.03 ^ _132_/Y (sky130_fd_sc_hd__a2111oi_4)
+                                         _054_ (net)
+                  0.22    0.00    3.03 ^ _135_/C (sky130_fd_sc_hd__nor3_1)
+     1    0.00    0.06    0.08    3.11 v _135_/Y (sky130_fd_sc_hd__nor3_1)
+                                         _057_ (net)
+                  0.06    0.00    3.11 v _136_/A (sky130_fd_sc_hd__xor2_1)
+     1    0.00    0.15    0.18    3.29 ^ _136_/X (sky130_fd_sc_hd__xor2_1)
+                                         P[13] (net)
+                  0.15    0.00    3.29 ^ P[13] (out)
+                                  3.29   data arrival time
+
+                  0.00    2.00    2.00   clock VCLK (rise edge)
+                          0.00    2.00   clock network delay (ideal)
+                          0.00    2.00   clock reconvergence pessimism
+                          0.00    2.00   output external delay
+                                  2.00   data required time
+-----------------------------------------------------------------------------
+                                  2.00   data required time
+                                 -3.29   data arrival time
+-----------------------------------------------------------------------------
+                                 -1.29   slack (VIOLATED)
+
+
+
+==========================================================================
+floorplan final report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: B[5] (input port clocked by VCLK)
+Endpoint: P[13] (output port clocked by VCLK)
+Path Group: VCLK
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock VCLK (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00 v input external delay
+     8    0.01    0.05    0.00    0.00 v B[5] (in)
+                                         B[5] (net)
+                  0.05    0.00    0.00 v _124_/B (sky130_fd_sc_hd__and2_4)
+     1    0.01    0.03    0.16    0.16 v _124_/X (sky130_fd_sc_hd__and2_4)
+                                         pp[29][0] (net)
+                  0.03    0.00    0.16 v _207_/A (sky130_fd_sc_hd__fa_1)
+     1    0.01    0.08    0.55    0.71 ^ _207_/SUM (sky130_fd_sc_hd__fa_1)
+                                         s1_c8_fa.sum (net)
+                  0.08    0.00    0.71 ^ _217_/B (sky130_fd_sc_hd__fa_1)
+     1    0.01    0.09    0.44    1.15 v _217_/SUM (sky130_fd_sc_hd__fa_1)
+                                         s2_c8_fa1.sum (net)
+                  0.09    0.00    1.15 v _228_/B (sky130_fd_sc_hd__fa_1)
+     1    0.01    0.10    0.49    1.64 v _228_/SUM (sky130_fd_sc_hd__fa_1)
+                                         s3_c8_fa.sum (net)
+                  0.10    0.00    1.64 v _239_/A (sky130_fd_sc_hd__fa_1)
+     1    0.01    0.11    0.60    2.23 ^ _239_/SUM (sky130_fd_sc_hd__fa_1)
+                                         s4_c8_fa.sum (net)
+                  0.11    0.00    2.23 ^ _253_/A (sky130_fd_sc_hd__ha_4)
+     6    0.01    0.05    0.23    2.46 v _253_/SUM (sky130_fd_sc_hd__ha_4)
+                                         _025_ (net)
+                  0.05    0.00    2.46 v _101_/A (sky130_fd_sc_hd__and3_4)
+     3    0.01    0.04    0.15    2.61 v _101_/X (sky130_fd_sc_hd__and3_4)
+                                         _034_ (net)
+                  0.04    0.00    2.61 v _102_/B (sky130_fd_sc_hd__and2_4)
+     2    0.01    0.04    0.16    2.77 v _102_/X (sky130_fd_sc_hd__and2_4)
+                                         _035_ (net)
+                  0.04    0.00    2.77 v _132_/A1 (sky130_fd_sc_hd__a2111oi_4)
+     1    0.00    0.22    0.26    3.03 ^ _132_/Y (sky130_fd_sc_hd__a2111oi_4)
+                                         _054_ (net)
+                  0.22    0.00    3.03 ^ _135_/C (sky130_fd_sc_hd__nor3_1)
+     1    0.00    0.06    0.08    3.11 v _135_/Y (sky130_fd_sc_hd__nor3_1)
+                                         _057_ (net)
+                  0.06    0.00    3.11 v _136_/A (sky130_fd_sc_hd__xor2_1)
+     1    0.00    0.15    0.18    3.29 ^ _136_/X (sky130_fd_sc_hd__xor2_1)
+                                         P[13] (net)
+                  0.15    0.00    3.29 ^ P[13] (out)
+                                  3.29   data arrival time
+
+                  0.00    2.00    2.00   clock VCLK (rise edge)
+                          0.00    2.00   clock network delay (ideal)
+                          0.00    2.00   clock reconvergence pessimism
+                          0.00    2.00   output external delay
+                                  2.00   data required time
+-----------------------------------------------------------------------------
+                                  2.00   data required time
+                                 -3.29   data arrival time
+-----------------------------------------------------------------------------
+                                 -1.29   slack (VIOLATED)
+
+
+
+==========================================================================
+floorplan final report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          8.08e-04   6.83e-04   9.29e-10   1.49e-03 100.0%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  8.08e-04   6.83e-04   9.29e-10   1.49e-03 100.0%
+                          54.2%      45.8%       0.0%

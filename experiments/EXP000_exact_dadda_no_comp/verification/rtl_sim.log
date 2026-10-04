@@ -1,0 +1,5 @@
+VCD info: dumpfile rtl_activity.vcd opened for output.
+RTL_VERIFY_VECTORS=65536
+RTL_VERIFY_PASSES=65536
+RTL_VERIFY_ERRORS=0
+/home/praneel/vlsi/projects/IDP_2/experiments/EXP000_exact_dadda_no_comp/verification/tb.sv:45: $finish called at 65536000 (1ps)

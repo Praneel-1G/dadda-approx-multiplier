@@ -1,0 +1,25 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# ORFS build/cache directories — regenerate when needed
+**/pd/orfs/objects/
+**/pd/orfs/tmp/
+**/pd/orfs/objects/
+
+# Simulation binaries / temporary compilation outputs
+**/verification/*.vvp
+
+# Temporary OpenROAD Tcl scratch files
+**/results/*~
+
+# Keep VCD/GDS/ODB/DEF/SPEF and research reports visible by default.
+# Put truly large binaries in Git LFS if you want them versioned in GitHub.

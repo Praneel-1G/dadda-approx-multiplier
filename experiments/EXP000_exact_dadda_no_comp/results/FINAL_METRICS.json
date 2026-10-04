@@ -1,0 +1,261 @@
+[
+  {
+    "metric": "experiment_id",
+    "value": "EXP000",
+    "unit": "",
+    "method": "manifest",
+    "notes": ""
+  },
+  {
+    "metric": "design_name",
+    "value": "exact_dadda_no_comp",
+    "unit": "",
+    "method": "manifest",
+    "notes": ""
+  },
+  {
+    "metric": "platform",
+    "value": "sky130hd",
+    "unit": "",
+    "method": "manifest",
+    "notes": ""
+  },
+  {
+    "metric": "input_width",
+    "value": "8",
+    "unit": "bits",
+    "method": "manifest",
+    "notes": ""
+  },
+  {
+    "metric": "output_width",
+    "value": "16",
+    "unit": "bits",
+    "method": "manifest",
+    "notes": ""
+  },
+  {
+    "metric": "clock_target",
+    "value": "2.000",
+    "unit": "ns",
+    "method": "SDC",
+    "notes": ""
+  },
+  {
+    "metric": "area",
+    "value": "1807.984000",
+    "unit": "um2",
+    "method": "Yosys synth_stat",
+    "notes": ""
+  },
+  {
+    "metric": "cell_count",
+    "value": "185",
+    "unit": "cells",
+    "method": "Yosys synth_stat",
+    "notes": ""
+  },
+  {
+    "metric": "port_count",
+    "value": "3",
+    "unit": "ports",
+    "method": "Yosys synth_stat",
+    "notes": ""
+  },
+  {
+    "metric": "period_min",
+    "value": "3.62",
+    "unit": "ns",
+    "method": "ORFS 6_finish",
+    "notes": ""
+  },
+  {
+    "metric": "fmax",
+    "value": "276.55",
+    "unit": "MHz",
+    "method": "derived",
+    "notes": ""
+  },
+  {
+    "metric": "wns",
+    "value": "-1.62",
+    "unit": "ns",
+    "method": "ORFS 6_finish",
+    "notes": ""
+  },
+  {
+    "metric": "tns",
+    "value": "-15.17",
+    "unit": "ns",
+    "method": "ORFS 6_finish",
+    "notes": ""
+  },
+  {
+    "metric": "critical_path_delay",
+    "value": "3.6160",
+    "unit": "ns",
+    "method": "ORFS 6_finish",
+    "notes": ""
+  },
+  {
+    "metric": "critical_path_slack",
+    "value": "-1.6160",
+    "unit": "ns",
+    "method": "ORFS 6_finish",
+    "notes": ""
+  },
+  {
+    "metric": "setup_violations",
+    "value": "12",
+    "unit": "count",
+    "method": "ORFS 6_finish",
+    "notes": ""
+  },
+  {
+    "metric": "hold_violations",
+    "value": "0",
+    "unit": "count",
+    "method": "ORFS 6_finish",
+    "notes": ""
+  },
+  {
+    "metric": "max_slew_violations",
+    "value": "0",
+    "unit": "count",
+    "method": "ORFS 6_finish",
+    "notes": ""
+  },
+  {
+    "metric": "max_fanout_violations",
+    "value": "0",
+    "unit": "count",
+    "method": "ORFS 6_finish",
+    "notes": ""
+  },
+  {
+    "metric": "max_cap_violations",
+    "value": "0",
+    "unit": "count",
+    "method": "ORFS 6_finish",
+    "notes": ""
+  },
+  {
+    "metric": "timing_status",
+    "value": "FAIL",
+    "unit": "",
+    "method": "derived",
+    "notes": ""
+  },
+  {
+    "metric": "vcd_unique_pairs",
+    "value": "65536",
+    "unit": "count",
+    "method": "VCD metrics",
+    "notes": ""
+  },
+  {
+    "metric": "vcd_error_count",
+    "value": "0",
+    "unit": "count",
+    "method": "VCD metrics",
+    "notes": ""
+  },
+  {
+    "metric": "vcd_error_rate",
+    "value": "0",
+    "unit": "",
+    "method": "VCD metrics",
+    "notes": ""
+  },
+  {
+    "metric": "vcd_mae",
+    "value": "0",
+    "unit": "",
+    "method": "VCD metrics",
+    "notes": ""
+  },
+  {
+    "metric": "vcd_mse",
+    "value": "0",
+    "unit": "",
+    "method": "VCD metrics",
+    "notes": ""
+  },
+  {
+    "metric": "vcd_wce",
+    "value": "0",
+    "unit": "",
+    "method": "VCD metrics",
+    "notes": ""
+  },
+  {
+    "metric": "vcd_mre_nonzero",
+    "value": "0",
+    "unit": "",
+    "method": "VCD metrics",
+    "notes": ""
+  },
+  {
+    "metric": "vcd_maxre_nonzero",
+    "value": "0",
+    "unit": "",
+    "method": "VCD metrics",
+    "notes": ""
+  },
+  {
+    "metric": "power_no_vcd",
+    "value": "3.04e-03",
+    "unit": "W",
+    "method": "ORFS 6_finish report_power",
+    "notes": "No VCD activity annotation in the finish report"
+  },
+  {
+    "metric": "power_no_vcd_mw",
+    "value": "3.040000",
+    "unit": "mW",
+    "method": "derived",
+    "notes": ""
+  },
+  {
+    "metric": "power_vcd",
+    "value": "1.789206e-03",
+    "unit": "W",
+    "method": "VCD-driven OpenROAD power",
+    "notes": "Annotated gate VCD"
+  },
+  {
+    "metric": "power_vcd_mw",
+    "value": "1.789206",
+    "unit": "mW",
+    "method": "derived",
+    "notes": ""
+  },
+  {
+    "metric": "power_vcd_minus_no_vcd_pct",
+    "value": "41.145",
+    "unit": "%",
+    "method": "derived",
+    "notes": "Relative reduction from no-VCD baseline"
+  },
+  {
+    "metric": "power_vcd_over_no_vcd",
+    "value": "0.588555",
+    "unit": "ratio",
+    "method": "derived",
+    "notes": ""
+  },
+  {
+    "metric": "pdp_no_vcd",
+    "value": "10.992640",
+    "unit": "pJ",
+    "method": "derived",
+    "notes": "Power x final critical-path delay"
+  },
+  {
+    "metric": "pdp_vcd",
+    "value": "6.469769",
+    "unit": "pJ",
+    "method": "derived",
+    "notes": "Power x final critical-path delay"
+  }
+]

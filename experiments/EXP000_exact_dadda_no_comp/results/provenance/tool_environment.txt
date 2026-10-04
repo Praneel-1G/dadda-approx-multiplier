@@ -1,0 +1,5 @@
+Collected on: 2026-10-04T15:56:14+05:30
+OR_FLOW=//home/praneel/vlsi/tools/OpenROAD-flow-scripts/flow
+LIBERTY=//home/praneel/vlsi/tools/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+IVERILOG=/usr/bin/iverilog
+OPENROAD=/home/praneel/vlsi/tools/OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad

@@ -1,0 +1,27 @@
+Yosys 0.68+ (git sha1 a5af9d690, Release, GNU /usr/bin/c++ 13.3.0) [github.com/The-OpenROAD-Project/yosys at HEAD]
+Using ABC speed script.
+Extracting clock period from SDC file: /home/praneel/vlsi/projects/IDP_2/experiments/EXP000_exact_dadda_no_comp/pd/orfs/results/sky130hd/exact_dadda_no_comp/base/clock_period.txt
+Setting clock period to 2.000
+1. Executing Liberty frontend: /home/praneel/vlsi/tools/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+2. Executing Liberty frontend: /home/praneel/vlsi/tools/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+3. Executing Verilog-2005 frontend: /home/praneel/vlsi/projects/IDP_2/rtl/exact/exact_dadda_no_comp.sv
+4. Executing Verilog-2005 frontend: /home/praneel/vlsi/projects/IDP_2/rtl/common/fa.sv
+5. Executing Verilog-2005 frontend: /home/praneel/vlsi/projects/IDP_2/rtl/common/ha.sv
+6. Executing Verilog-2005 frontend: /home/praneel/vlsi/tools/OpenROAD-flow-scripts/flow/platforms/sky130hd/cells_clkgate_hd.v
+7. Executing HIERARCHY pass (managing design hierarchy).
+8. Executing AST frontend in derive mode using pre-parsed AST for module `\exact_dadda_no_comp'.
+8.1. Analyzing design hierarchy..
+8.2. Executing AST frontend in derive mode using pre-parsed AST for module `\fa'.
+8.3. Executing AST frontend in derive mode using pre-parsed AST for module `\ha'.
+8.4. Analyzing design hierarchy..
+8.5. Analyzing design hierarchy..
+9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module exact_dadda_no_comp because it contains processes (run 'proc' command first).
+10. Executing RTLIL backend.
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: 3554b46368, time: 0.18s, user: 0.13s, system: 0.03s, MEM: 52.80 MB peak
+Yosys 0.68+ (git sha1 a5af9d690, Release, GNU /usr/bin/c++ 13.3.0) [github.com/The-OpenROAD-Project/yosys at HEAD]
+Time spent: 68% 4x read_liberty (0 sec), 13% 1x hierarchy (0 sec), ...
+Elapsed time: 0:00.19[h:]min:sec. CPU time: user 0.14 sys 0.04 (93%). Peak memory: 57152KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+1_1_yosys_canonicalize    .rtlil          0             55 156b123532f1a5a9f742

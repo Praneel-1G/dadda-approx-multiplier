@@ -1,0 +1,105 @@
+OpenROAD 26Q3-1499-g46ab99414e 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty /home/praneel/vlsi/tools/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/praneel/vlsi/projects/IDP_2/experiments/EXP000_exact_dadda_no_comp/pd/orfs/results/sky130hd/exact_dadda_no_comp/base/1_synth.odb
+read_sdc /home/praneel/vlsi/projects/IDP_2/experiments/EXP000_exact_dadda_no_comp/pd/orfs/results/sky130hd/exact_dadda_no_comp/base/1_synth.sdc
+source /home/praneel/vlsi/tools/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+Master sky130_ef_sc_hd__decap_12 is loaded but not used in the design
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+number instances in verilog is 185
+[INFO IFP-0107] Defining die area using utilization: 40.00% and aspect ratio: 1.
+[WARNING IFP-0028] Core area lower left (2.000, 2.000) snapped to (2.300, 2.720).
+[INFO IFP-0001] Added 24 rows of 145 site unithd.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 71.230 71.230 ) um
+[INFO IFP-0101] Core BBox: (  2.300  2.720 ) ( 69.000 68.000 ) um
+[INFO IFP-0102] Core area:                         4354.176 um^2
+[INFO IFP-0103] Total instances area:              1807.984 um^2
+[INFO IFP-0104] Effective utilization:                0.415
+[INFO IFP-0105] Number of instances:                    185
+source /home/praneel/vlsi/tools/OpenROAD-flow-scripts/flow/platforms/sky130hd/make_tracks.tcl
+source /home/praneel/vlsi/tools/OpenROAD-flow-scripts/flow/platforms/sky130hd/fastroute.tcl
+Repair tie lo fanout...
+Repair tie hi fanout...
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -setup -skip_last_gasp -sequence unbuffer,sizeup,swap,vt_swap -verbose
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove 
+[INFO RSZ-0094] Found 11 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 11 out of 11 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   StTNS    |   EnTNS    |  Viol  |  Worst  
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            |            | Endpts | St/EnPt 
+------------------------------------------------------------------------------------------------------------------------------
+       0* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.380 |      -18.1 |      -11.1 |     11 | P[13]
+      10* |       0 |       4 |        0 |      0 |     5 |    +2.2% |   -1.421 |      -17.9 |      -11.3 |     11 | P[13]
+      20* |       0 |       9 |        0 |      0 |    10 |    +4.2% |   -1.292 |      -16.9 |      -11.0 |     11 | P[13]
+      20* |       0 |       9 |        0 |      0 |     9 |    +4.2% |   -1.292 |      -16.9 |      -11.0 |     11 | P[13]
+      30* |       0 |      15 |        0 |      0 |    12 |    +5.7% |   -1.292 |      -16.8 |      -10.9 |     11 | P[13]
+      34* |       0 |       9 |        0 |      0 |     9 |    +4.2% |   -1.292 |      -16.9 |      -11.0 |     11 | P[13]
+      39* |       0 |       9 |        0 |      0 |     9 |    +4.2% |   -1.292 |      -16.9 |      -11.0 |     11 | P[13]
+      40* |       0 |       9 |        0 |      0 |     9 |    +4.2% |   -1.292 |      -16.9 |      -11.0 |     11 | P[13]
+      50* |       0 |      14 |        0 |      0 |    14 |    +5.0% |   -1.302 |      -17.0 |      -11.0 |     11 | P[13]
+      50* |       0 |       9 |        0 |      0 |     9 |    +4.2% |   -1.292 |      -16.9 |      -11.0 |     11 | P[13]
+      60* |       0 |      10 |        0 |      0 |    17 |    +4.4% |   -1.344 |      -17.2 |      -11.2 |     11 | P[13]
+      66* |       0 |       9 |        0 |      0 |    10 |    +4.2% |   -1.292 |      -16.9 |      -10.9 |     11 | P[13]
+      69* |       0 |       9 |        0 |      0 |    10 |    +4.2% |   -1.292 |      -16.9 |      -10.9 |     11 | P[13]
+      70* |       0 |       9 |        0 |      0 |    10 |    +4.2% |   -1.292 |      -16.9 |      -10.9 |     11 | P[13]
+      75* |       0 |      10 |        0 |      0 |    12 |    +4.4% |   -1.292 |      -16.9 |      -10.9 |     11 | P[13]
+      78* |       0 |      10 |        0 |      0 |    12 |    +4.4% |   -1.292 |      -16.9 |      -10.9 |     11 | P[13]
+      80* |       0 |      10 |        0 |      0 |    13 |    +4.4% |   -1.292 |      -16.9 |      -11.0 |     11 | P[13]
+      85* |       0 |      13 |        0 |      0 |    13 |    +5.3% |   -1.292 |      -16.9 |      -10.8 |     11 | P[13]
+      90* |       0 |      15 |        0 |      0 |    15 |    +6.4% |   -1.292 |      -16.7 |      -10.7 |     11 | P[13]
+      98* |       0 |      15 |        0 |      0 |    13 |    +6.4% |   -1.292 |      -16.7 |      -10.7 |     11 | P[13]
+     100* |       0 |      16 |        0 |      0 |    13 |    +6.8% |   -1.292 |      -16.7 |      -10.7 |     11 | P[13]
+     104* |       0 |      18 |        0 |      0 |    14 |    +7.1% |   -1.292 |      -16.7 |      -10.6 |     11 | P[13]
+     104* |       0 |      18 |        0 |      0 |    14 |    +7.1% |   -1.292 |      -16.7 |      -10.6 |     11 | P[13]
+    final |       0 |      18 |        0 |      0 |    14 |    +7.1% |   -1.292 |      -16.7 |      -10.6 |     11 | P[13]
+------------------------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0051] Resized 18 instances: 18 up, 0 up match, 0 down, 0 VT
+[INFO RSZ-0043] Swapped pins on 14 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0505] Runtime: 0.38s
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+   Layer   | Unit Resistance | Unit Capacitance 
+           |       (kohm/um) |          (pF/um)
+------------------------------------------------
+       li1 |        7.18e-02 |         1.50e-04
+      met1 |        1.21e-03 |         1.72e-04
+      met2 |        1.22e-03 |         1.36e-04
+      met3 |        1.66e-04 |         2.15e-04
+      met4 |        1.68e-04 |         1.48e-04
+      met5 |        1.84e-05 |         1.54e-04
+------------------------------------------------
+
+   Layer   | Via Resistance 
+           |         (kohm) 
+----------------------------
+      mcon |       9.25e-03 
+       via |       4.50e-03 
+      via2 |       3.37e-03 
+      via3 |       3.77e-04 
+      via4 |       5.80e-06 
+----------------------------
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 1937 um^2 44% utilization.
+write_db /home/praneel/vlsi/projects/IDP_2/experiments/EXP000_exact_dadda_no_comp/pd/orfs/results/sky130hd/exact_dadda_no_comp/base/2_1_floorplan.odb
+write_sdc -no_timestamp /home/praneel/vlsi/projects/IDP_2/experiments/EXP000_exact_dadda_no_comp/pd/orfs/results/sky130hd/exact_dadda_no_comp/base/2_1_floorplan.sdc
+Elapsed time: 0:00.79[h:]min:sec. CPU time: user 0.77 sys 0.20 (122%). Peak memory: 140144KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+2_1_floorplan             .odb            0            136 bd42702daac64028931a
+2_1_floorplan             .sdc                             53b8276368334e0a74f3
