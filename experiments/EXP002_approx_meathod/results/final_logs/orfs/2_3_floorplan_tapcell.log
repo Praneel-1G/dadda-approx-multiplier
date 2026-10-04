@@ -1,0 +1,15 @@
+OpenROAD 26Q3-1499-g46ab99414e 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty /home/praneel/vlsi/tools/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/praneel/vlsi/projects/IDP_2/experiments/EXP002_approx_meathod/pd/orfs/results/sky130hd/approx_dadda_d1/base/2_2_floorplan_macro.odb
+read_sdc /home/praneel/vlsi/projects/IDP_2/experiments/EXP002_approx_meathod/pd/orfs/results/sky130hd/approx_dadda_d1/base/2_1_floorplan.sdc
+source /home/praneel/vlsi/tools/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[INFO TAP-0005] Inserted 70 tapcells.
+Design area 2305 um^2 45% utilization.
+write_db /home/praneel/vlsi/projects/IDP_2/experiments/EXP002_approx_meathod/pd/orfs/results/sky130hd/approx_dadda_d1/base/2_3_floorplan_tapcell.odb
+Elapsed time: 0:00.71[h:]min:sec. CPU time: user 0.64 sys 0.07 (98%). Peak memory: 119520KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+2_3_floorplan_tapcell     .odb            0            116 327e9529378045a22fe2

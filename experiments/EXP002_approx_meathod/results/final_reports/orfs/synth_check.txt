@@ -1,0 +1,4 @@
+
+20. Executing CHECK pass (checking for obvious problems).
+Checking module approx_dadda_d1...
+Found and reported 0 problems.

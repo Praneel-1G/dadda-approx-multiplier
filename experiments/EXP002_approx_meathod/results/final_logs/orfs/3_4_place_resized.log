@@ -1,0 +1,72 @@
+OpenROAD 26Q3-1499-g46ab99414e 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 12 thread(s).
+read_liberty /home/praneel/vlsi/tools/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /home/praneel/vlsi/projects/IDP_2/experiments/EXP002_approx_meathod/pd/orfs/results/sky130hd/approx_dadda_d1/base/3_3_place_gp.odb
+read_sdc /home/praneel/vlsi/projects/IDP_2/experiments/EXP002_approx_meathod/pd/orfs/results/sky130hd/approx_dadda_d1/base/2_floorplan.sdc
+source /home/praneel/vlsi/tools/OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |       405
+       10 |     +0.0% |       0 |       0 |             0 |       395
+       20 |     +0.0% |       0 |       0 |             0 |       385
+       30 |     +0.0% |       0 |       0 |             0 |       375
+       40 |     +0.0% |       0 |       0 |             0 |       365
+       50 |     +0.0% |       0 |       0 |             0 |       355
+       60 |     +0.0% |       0 |       0 |             0 |       345
+       70 |     +0.0% |       0 |       0 |             0 |       335
+       80 |     +0.0% |       0 |       0 |             0 |       325
+       90 |     +0.0% |       0 |       0 |             0 |       315
+      100 |     +0.0% |       0 |       0 |             0 |       305
+      110 |     +0.0% |       0 |       0 |             0 |       295
+      120 |     +0.0% |       0 |       0 |             0 |       285
+      130 |     +0.0% |       0 |       0 |             0 |       275
+      140 |     +0.0% |       0 |       0 |             0 |       265
+      150 |     +0.0% |       0 |       0 |             0 |       255
+      160 |     +0.0% |       0 |       0 |             0 |       245
+      170 |     +0.0% |       0 |       0 |             0 |       235
+      180 |     +0.0% |       0 |       0 |             0 |       225
+      190 |     +0.0% |       0 |       0 |             0 |       215
+      200 |     +0.0% |       0 |       0 |             0 |       205
+      210 |     +0.0% |       0 |       0 |             0 |       195
+      220 |     +0.0% |       0 |       0 |             0 |       185
+      230 |     +0.0% |       0 |       0 |             0 |       175
+      240 |     +0.0% |       0 |       0 |             0 |       165
+      250 |     +0.0% |       0 |       0 |             0 |       155
+      260 |     +0.0% |       0 |       0 |             0 |       145
+      270 |     +0.0% |       0 |       0 |             0 |       135
+      280 |     +0.0% |       0 |       0 |             0 |       125
+      290 |     +0.0% |       0 |       0 |             0 |       115
+      300 |     +0.0% |       0 |       0 |             0 |       105
+      310 |     +0.0% |       0 |       0 |             0 |        95
+      320 |     +0.0% |       0 |       0 |             0 |        85
+      330 |     +0.0% |       0 |       0 |             0 |        75
+      340 |     +0.0% |       0 |       0 |             0 |        65
+      350 |     +0.0% |       0 |       0 |             0 |        55
+      360 |     +0.0% |       0 |       0 |             0 |        45
+      370 |     +0.0% |       0 |       0 |             0 |        35
+      380 |     +0.0% |       0 |       0 |             0 |        25
+      390 |     +0.0% |       0 |       0 |             0 |        15
+      400 |     +0.0% |       0 |       0 |             0 |         5
+    final |     +0.0% |       0 |       0 |             0 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0504] Runtime: 0.04s
+Floating nets: 
+Report metrics stage 3, resizer...
+No registers in design
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 3025 um^2 60% utilization.
+Instance count before 418, after 418
+Pin count before 1126, after 1126
+write_db /home/praneel/vlsi/projects/IDP_2/experiments/EXP002_approx_meathod/pd/orfs/results/sky130hd/approx_dadda_d1/base/3_4_place_resized.odb
+Elapsed time: 0:00.88[h:]min:sec. CPU time: user 0.77 sys 0.14 (103%). Peak memory: 140216KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+3_4_place_resized         .odb            0            136 703c23a81b87c3d7dc97
