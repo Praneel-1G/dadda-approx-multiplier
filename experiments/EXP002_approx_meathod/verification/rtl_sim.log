@@ -1,0 +1,16 @@
+VCD info: dumpfile rtl_activity.vcd opened for output.
+==================================================
+      APPROXIMATE MULTIPLIER ERROR METRICS        
+==================================================
+Total Combinations (N)       : 65536
+Non-Zero Exact Outputs (Nnz) : 65025
+Error Count (N_error)        : 28284
+--------------------------------------------------
+Error Rate (ER)              : 0.431580
+Mean Absolute Error (MAE)    : 896.367188
+Mean Squared Error (MSE)     : 8761197.250000
+Worst-Case Error (WCE)       : 29448
+Mean Relative Error (MRE)    : 0.029120
+Maximum Relative Error(MaxRE): 0.461176
+==================================================
+/home/praneel/vlsi/projects/IDP_2/experiments/EXP002_approx_meathod/verification/tb.sv:102: $finish called at 65536000 (1ps)
